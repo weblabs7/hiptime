@@ -26,4 +26,8 @@ class ItemsController < ApplicationController
         params.require(:item).permit(:title, :description)
     end
     
+    def find_item
+        @item = Item.find(params[:id])
+    end
+    
 end
